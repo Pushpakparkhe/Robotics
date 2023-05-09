@@ -1,0 +1,53 @@
+.me-auto my-2 my-lg-0 {
+  flex: 1;
+  float: right;
+}
+
+.body {
+  display: flex;
+}
+
+.title {
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(229, 203, 203);
+  
+}
+
+.paragraph {
+  margin-top: 40px;
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(229, 203, 203);
+}
+
+.right-scr {
+  display: flex;
+  justify-content: flex-end;
+  height: 42px;
+}
+
+.rt-title {
+  font-family: "Times New Roman", Times, serif;
+  color: aliceblue;
+  margin-right: 10px;
+}
+
+span{
+  animation-name: fade-in-out;
+  animation-duration: 4s;
+  animation-iteration-count: 3;
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
