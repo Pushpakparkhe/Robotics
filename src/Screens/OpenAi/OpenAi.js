@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Configuration, OpenAIApi } from "openai";
+import "./Style.css";
 
 const OpenAi = () => {
   const [input, setinput] = useState("");
+  const [responce, setresponce] = useState("");
 
   const configuration = new Configuration({
     organization: "org-6SJGrNrFhkEAe6IQKYnadYRa",
@@ -18,20 +20,26 @@ const OpenAi = () => {
       })
       .then((res) => {
         console.log(res.data.choices[0].message.content);
-        const responce = res.data.choices[0].message.content;
+        setresponce(res.data.choices[0].message.content);
+        console.log("qqqqqqqqqqqqqqqq", responce);
       });
   };
 
   return (
-    <>
+    <div style={{ display: "grid", placeItems: "center", margin: "20px" }}>
       <input
+        placeholder="search something"
+        className="my-input"
         type="text"
         value={input}
         onChange={(e) => setinput(e.target.value)}
       />
 
-      <button onClick={renderResponce}>search</button>
-    </>
+      <button onClick={renderResponce} className="my-button">
+        search
+      </button>
+      <p className="my-para">{responce}</p>
+    </div>
   );
 };
 
