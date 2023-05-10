@@ -20,8 +20,11 @@
   cursor: pointer;
   outline: none;
 }
+.my-button:hover{
+  background-color: rgb(27, 88, 138);
+
+}
 
 .my-para{
     color: white;
-    
 }

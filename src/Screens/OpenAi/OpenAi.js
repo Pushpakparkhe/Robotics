@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import { Configuration, OpenAIApi } from "openai";
+import { useSpeechSynthesis } from "react-speech-kit";
 import "./Style.css";
 
 const OpenAi = () => {
   const [input, setinput] = useState("");
   const [responce, setresponce] = useState("");
+
+  const [value, setValue] = useState("");
+  const { speak } = useSpeechSynthesis();
 
   const configuration = new Configuration({
     organization: "org-6SJGrNrFhkEAe6IQKYnadYRa",
@@ -35,10 +39,18 @@ const OpenAi = () => {
         onChange={(e) => setinput(e.target.value)}
       />
 
-      <button onClick={renderResponce} className="my-button">
+      <button onClick={renderResponce} className={`my-button`}>
         search
       </button>
-      <p className="my-para">{responce}</p>
+      <p className="my-para" id="txtToSpeech">
+        {responce}
+      </p>
+
+      <button
+        onClick={() => speak({ text: responce }) }
+      >
+        Speak
+      </button>
     </div>
   );
 };
