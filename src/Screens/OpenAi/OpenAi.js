@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import { Configuration, OpenAIApi } from "openai";
-import { useSpeechSynthesis } from "react-speech-kit";
+import { useSpeechRecognition, useSpeechSynthesis } from "react-speech-kit";
 import "./Style.css";
 
 const OpenAi = () => {
   const [input, setinput] = useState("");
-  const [responce, setresponce] = useState("");
-
-  const [value, setValue] = useState("");
-  const { speak } = useSpeechSynthesis();
+  const [responce, setresponce] = useState('');
+  const { speak, cancel } = useSpeechSynthesis();
 
   const configuration = new Configuration({
     organization: "org-6SJGrNrFhkEAe6IQKYnadYRa",
@@ -38,19 +36,27 @@ const OpenAi = () => {
         value={input}
         onChange={(e) => setinput(e.target.value)}
       />
+      <div className="btn">
+        <button onClick={renderResponce} className="my-button">
+          search
+        </button>
 
-      <button onClick={renderResponce} className={`my-button`}>
-        search
-      </button>
+        <button 
+          className="my-buttonsp" 
+          onClick={() => speak({ text: responce })}>
+          Speak
+        </button>
+
+        <button
+          className="my-buttonsp"
+          onClick={() => cancel({ text: responce })}
+        >
+          stop
+        </button>
+      </div>
       <p className="my-para" id="txtToSpeech">
         {responce}
       </p>
-
-      <button
-        onClick={() => speak({ text: responce }) }
-      >
-        Speak
-      </button>
     </div>
   );
 };
