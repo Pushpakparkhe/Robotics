@@ -11,12 +11,12 @@ function Navbar() {
           <div class="container-fluid">
             <div>
               <img
-                src={require("./images/logo.png")}
+                src={require("./images/logo.png")} alt="logo"
                 style={{ width: "50px" }}
               />
-              <a class="navbar-brand" href="#">
+              <span class="navbar-brand" href="#">
                 ROBOTICS
-              </a>
+              </span>
             </div>
             <button
               class="navbar-toggler"
