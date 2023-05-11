@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Configuration, OpenAIApi } from "openai";
-import { useSpeechRecognition, useSpeechSynthesis } from "react-speech-kit";
+import { useSpeechSynthesis } from "react-speech-kit";
 import "./Style.css";
 
 const OpenAi = () => {
