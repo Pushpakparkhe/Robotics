@@ -9,7 +9,7 @@
 
 .title {
   font-family: "Times New Roman", Times, serif;
-  color: rgb(229, 203, 203);
+  color: white;
   
 }
 
@@ -50,4 +50,21 @@ span{
   100% {
     opacity: 0;
   }
+}
+
+.historyTitle{
+  margin-top: 50px;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.historypara{
+  margin-top: 30px;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.videofile{
+  margin-top: 40px;
+  width: 100%;
 }
