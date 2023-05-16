@@ -66,6 +66,7 @@ function Home() {
           <div className="videofile">
             <video controls></video>
           </div>
+          <Button onClick={() => navigate("/article")}>search article</Button>
         </div>
       </div>
     </div>

@@ -1,0 +1,33 @@
+.ArticlePage {
+  height: 100vh;
+}
+
+.userinput {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.name{
+    margin: 10px;
+    background-color: transparent;
+    color: white;
+    width: 300px;
+}
+.name::placeholder{
+    color: rgb(192, 188, 185);
+}
+
+.article{
+    margin: 10px;
+    background-color: transparent;
+    color: rgb(172, 165, 165);
+    width: 400px;
+    height: 150px;
+}
+
+.article::placeholder{
+    color: rgb(192, 188, 185);
+}

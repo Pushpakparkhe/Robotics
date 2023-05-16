@@ -6,6 +6,7 @@ import Services from "./Screens/Services/Services";
 import About from "./Screens/About/About";
 import Contact from "./Screens/Contact/Contact";
 import OpenAi from "./Screens/OpenAi/OpenAi";
+import Article from "./Screens/Article/Article";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/openAi" element={<OpenAi />} />
+        <Route path="/article" element={<Article/>}/>
       </Routes>
     </div>
   );
